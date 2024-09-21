@@ -16,4 +16,15 @@ class ReviewForm(forms.ModelForm):
         fields = '__all__'
         # fields = ['user_name', 'review_text', 'rating']
         # exclude = ['onwer_comment']
+        labes = {
+            "user_name": "Your Name",
+            "review_text": "Your Feedback",
+            "rating": "Your Rating"
+        }
+        error_messages = {
+            "user_name": {
+                "required": "Your name must not be empty",
+                "max_length": "Please enter a shorter name"
+            }
+        }
         
