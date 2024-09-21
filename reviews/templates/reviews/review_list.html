@@ -4,9 +4,7 @@
 
 {% block content%}
     <h1>All Reviews</h1>
-    <li>
-        {% for review in reviews %}
-            <li>{{ review.user_name }} (Rating: {{ review.rating }})</li>
-        {% endfor %}        
-    </li>
+    {% for review in reviews %}
+        <li>{{ review.user_name }} (Rating: {{ review.rating }})</li>
+    {% endfor %}        
 {% endblock %}
