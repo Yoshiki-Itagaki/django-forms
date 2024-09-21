@@ -12,6 +12,7 @@ def review(request):
         
         if form.is_valid():         
             return HttpResponseRedirect("/thank-you")
+        
     else:
         form = ReviewForm()
     
