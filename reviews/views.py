@@ -10,9 +10,10 @@ def review(request):
     if request.method == "POST":
         form = ReviewForm(request.POST)
         
-        if form.is_valid():           
-            
-            return HttpResponseRedirect("/thank-you")        
+        if form.is_valid():         
+            return HttpResponseRedirect("/thank-you")
+        else:
+            form = ReviewForm()
 
     form = ReviewForm()
     
